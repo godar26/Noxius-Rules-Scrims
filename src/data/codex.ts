@@ -122,11 +122,11 @@ export const maps: MapCard[] = [
   { name: "Tunisia", mode: "snd", image: "/codex/maps/tunisia.jpg", line: "Murs ocres, escaliers, mer." },
   { name: "Firing Range", mode: "snd", image: "/codex/maps/firing-range.jpg", line: "Couloirs de stand, merlons." },
   { name: "Coastal", mode: "snd", image: "/codex/maps/coastal.jpg", line: "Terrasses blanches, falaise." },
-  { name: "Slums", mode: "snd", plate: "plate-b", line: "Ruelles serrées, étages bas." },
-  { name: "Meltdown", mode: "snd", plate: "plate-c", line: "Tours, vapeur, coursives." },
-  { name: "Raid", mode: "ctrl", plate: "plate", line: "Villa, bassin, escaliers." },
-  { name: "Standoff", mode: "ctrl", plate: "plate-b", line: "Rue large, façades face à face." },
-  { name: "Crossroads Strike", mode: "ctrl", plate: "plate-c", line: "Quatre routes, village croisé." },
+  { name: "Slums", mode: "snd", image: "/codex/maps/slums.jpg", line: "Ruelles serrées, étages bas." },
+  { name: "Meltdown", mode: "snd", image: "/codex/maps/meltdown.jpg", line: "Tours, vapeur, coursives." },
+  { name: "Raid", mode: "ctrl", image: "/codex/maps/raid.jpg", line: "Villa, bassin, escaliers." },
+  { name: "Standoff", mode: "ctrl", image: "/codex/maps/standoff.jpg", line: "Rue large, façades face à face." },
+  { name: "Crossroads Strike", mode: "ctrl", image: "/codex/maps/crossroads-strike.jpg", line: "Quatre routes, village croisé." },
 ];
 
 export const bo5Slots: Slot[] = [
@@ -292,23 +292,23 @@ export const finalPhases: Phase[] = [
 ];
 
 export const roles: Role[] = [
-  { quota: "3", short: "FA", fr: "Fusils d’assaut", en: "Assault Rifles", rule: "Autorisé à équiper la classe fusil d’assaut." },
+  { quota: "3", short: "AR", fr: "Fusils d’assaut", en: "Assault Rifles", rule: "Autorisé à équiper la classe fusil d’assaut." },
   { quota: "3", short: "SMG", fr: "Mitraillettes", en: "Sub-Machine Guns", rule: "Autorisé à équiper la classe mitraillette." },
-  { quota: "1", short: "FM", fr: "Fusils-mitrailleurs", en: "Light Machine Guns", rule: "Autorisé à équiper la classe fusil-mitrailleur." },
+  { quota: "1", short: "LMG", fr: "Fusils-mitrailleurs", en: "Light Machine Guns", rule: "Autorisé à équiper la classe fusil-mitrailleur." },
   { quota: "1", short: "POMPE", fr: "Fusils à pompe", en: "Shotgun", rule: "Autorisé à équiper la classe fusil à pompe." },
   { quota: "1", short: "SNIPER", fr: "Précision", en: "Sniper", rule: "Autorisé à équiper la classe fusil de précision." },
   { quota: "1", short: "MARKS", fr: "Tireur", en: "Marksman", rule: "Autorisé à équiper la classe fusil de tireur d’élite." },
 ];
 
 export const roster = [
-  { player: "Joueur 1", a: "FA", b: "SMG" },
+  { player: "Joueur 1", a: "AR", b: "SMG" },
   { player: "Joueur 2", a: "SMG", b: "Pompe" },
-  { player: "Joueur 3", a: "FA", b: "FM" },
-  { player: "Joueur 4", a: "FA", b: "Sniper" },
+  { player: "Joueur 3", a: "AR", b: "LMG" },
+  { player: "Joueur 4", a: "AR", b: "Sniper" },
   { player: "Joueur 5", a: "SMG", b: "Marksman" },
 ];
 
-export const poolChips = ["FA", "FA", "FA", "SMG", "SMG", "SMG", "FM", "Pompe", "Sniper", "Marksman"];
+export const poolChips = ["AR", "AR", "AR", "SMG", "SMG", "SMG", "LMG", "Pompe", "Sniper", "Marksman"];
 
 export const cats = [
   { id: "tout", label: "Tout" },
