@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Noxius Codex",
+      "hasCanvas": false,
+      "bodyTextLen": 14384,
+      "bodyTextHash": "5be361a40fab70a7e42471680c0785d928c753b9c067eebbf996cae1cfe1c50e",
+      "bodyTextPrefix": "NOXIUS ACCUEIL RÉGLAGES CARTES FORMATS RÔLES ARSENAL JOURNAL PDF",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Noxius Codex",
+      "hasCanvas": false,
+      "bodyTextLen": 14380,
+      "bodyTextHash": "1ff7cf1375b6a3e058db8ebe4498f2aa2baff43e482ce0a0f4b44eab557d8ec7",
+      "bodyTextPrefix": "NOXIUS ACCUEIL RÉGLAGES CARTES FORMATS RÔLES ARSENAL JOURNAL CLA",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

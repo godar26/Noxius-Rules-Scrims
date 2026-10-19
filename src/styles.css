@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #07090b;
+  --color-panel: #14181c;
+  --color-line: #2c3832;
+  --color-bone: #e8f0e4;
+  --color-mist: #a3b0a6;
+  --color-venom: #d6ff3c;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+}
+
+@layer base {
+  html {
+    background: var(--color-ink);
+    color: var(--color-bone);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--color-ink);
+    color: var(--color-bone);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  summary {
+    cursor: pointer;
+  }
+
+  summary {
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-venom);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-venom);
+    color: var(--color-ink);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+@layer components {
+  .display-xl {
+    font-family: var(--font-display);
+    font-size: clamp(4.2rem, 14vw, 8.5rem);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 0.84;
+    text-transform: uppercase;
+  }
+
+  .display-lg {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .kicker {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .glass {
+    background: color-mix(in oklab, var(--color-panel) 72%, transparent);
+    border: 1px solid color-mix(in oklab, var(--color-bone) 14%, transparent);
+    box-shadow:
+      0 24px 50px color-mix(in oklab, black 45%, transparent),
+      inset 0 1px 0 color-mix(in oklab, var(--color-bone) 24%, transparent);
+    backdrop-filter: blur(18px) saturate(1.35);
+  }
+
+  .stage {
+    perspective: 1400px;
+  }
+
+  .slab {
+    transform-style: preserve-3d;
+    transition: transform 220ms ease, border-color 220ms ease;
+  }
+
+  .lift {
+    transition: transform 200ms ease;
+  }
+
+  .plate {
+    background:
+      linear-gradient(145deg, color-mix(in oklab, var(--color-venom) 22%, transparent), transparent 46%),
+      url("/codex/crest.jpg") center / cover;
+  }
+
+  .plate-b {
+    background:
+      linear-gradient(200deg, transparent 20%, color-mix(in oklab, var(--color-ink) 30%, transparent)),
+      repeating-linear-gradient(
+        90deg,
+        transparent 0 14px,
+        color-mix(in oklab, var(--color-venom) 16%, transparent) 14px 15px
+      ),
+      url("/codex/crest.jpg") center / cover;
+  }
+
+  .frame-map {
+    aspect-ratio: 3 / 2;
+  }
+
+  .veil-hero {
+    background: linear-gradient(
+      to top,
+      var(--color-ink) 0%,
+      color-mix(in oklab, var(--color-ink) 72%, transparent) 42%,
+      color-mix(in oklab, var(--color-ink) 28%, transparent) 100%
+    );
+  }
+
+  .veil-card {
+    background: linear-gradient(to top, var(--color-ink) 0%, transparent 62%);
+  }
+
+  .plate-c {
+    background:
+      radial-gradient(circle at 50% 45%, transparent 0 18%, color-mix(in oklab, var(--color-venom) 20%, transparent) 19% 20%, transparent 21%),
+      url("/codex/hero.jpg") center 30% / cover;
+  }
+
+  .filtered-out {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .slab:hover {
+    transform: translateY(-6px) rotateX(5deg);
+  }
+
+  .lift:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slab,
+  .lift {
+    transition: none;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .filtered-out {
+    display: block !important;
+  }
+
+  details > *:not(summary) {
+    display: block !important;
+  }
+
+  body {
+    background: var(--color-ink);
+  }
+
+  .glass,
+  img {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+}
